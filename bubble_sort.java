@@ -28,7 +28,7 @@ class bubble_sort{
 Stable Vs Unstable sort:
 3. Stable sorting algorithms preserve the relative order of equal elements, while unstable sorting algorithms don't
 	Bubble sort is a stable sort algorithm.
-Example:
+Example(from an external source):
 First step – compute the word count:
 
 Input:
