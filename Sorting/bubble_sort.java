@@ -5,9 +5,8 @@ class bubble_sort{
 		int count=0;
 		for(int i=0; i<arr.length; i++){
 			for (int j=0; j<arr.length-i-1;j++){
-				count++;
 				if(arr[j]>arr[j+1]){
-					
+					count++;
 					temp=arr[j];
 					arr[j]=arr[j+1];
 					arr[j+1]=temp;
@@ -17,7 +16,7 @@ class bubble_sort{
 		for(int i=0;i<arr.length;i++){
 			System.out.println(arr[i]);
 		}
-		System.out.println("no.of loops of 10 elements(worst case): "+count);
+		System.out.println("no.of swaps of 10 elements(worst case): "+count);
 	}
 	
 }
