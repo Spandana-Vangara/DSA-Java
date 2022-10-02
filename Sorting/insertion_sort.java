@@ -28,3 +28,9 @@ class insertion_sort{
 		System.out.println("no.of loops of 10 elements(worst case): "+count);
 	}
 }
+/*
+1. In-place algorithm, which means no extra array is needed to sort. in actuall array itself by swaping we achive sorting. (though we use a single extra memory, and this memory dosent depend on no.of elements we need to sort, we can say it's in-place algo).
+2. time complexity is O(n^2)(quadratic).
+3. it's an unstable sort. 
+4. it does shifting instead of swaping.
+*/
