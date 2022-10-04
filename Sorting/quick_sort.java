@@ -6,15 +6,36 @@ class quick_sort{
 			System.out.println(arr[i]);
 		}
 	}
+	public static void quickSort(int arr[],int start,int end){
+		if(start-end<2){
+			return;
+		}
+		int pivot=quickSort_partiton(arr,start,end);
+		quickSort(arr,start,pivot);
+		quickSort(arr,pivot+1,end);
+	}
 	
-	public static void quickSort(int[] arr,start,end){
-		int pivot=start;
-		
+	public static int quickSort_partiton(int[] arr,int start,int end){
+		int pivot=arr[start];
+		int i=start;
+		int j=end;
+		while(i<j){
+			while(i<j && arr[--j]>pivot);//empty loop, just to hit a j-indexed value which is less than pivot.
+			if(i<j){
+				arr[i]=arr[j];
+			}
+			while(i<j && arr[++i]<pivot);
+			if(i<j){
+				arr[j]=arr[i];
+			}
+		}
+		arr[j]=pivot;
+		return j;
 	}
 }
 /*
 1. It's an In-place algorithm.
 2. time complexity is O(nlogn)base 2. In worst case it is O(n^2) but most cases it works better than merge sort.
 3. Divide & conqure. recursive algo. 
-4. Stable algorithm.
+4. Unstable algorithm.
 */
